@@ -1,0 +1,17 @@
+n = int(input())
+Same = n
+j = 1
+k = 1
+while n != 0:
+    n = int(input())
+    if n == Same:
+        j += 1
+    if n != Same:
+        Same = n
+        if j <= k:
+            j = 1
+            continue
+        elif k < j:
+            k = j
+            j = 1
+print(k)
